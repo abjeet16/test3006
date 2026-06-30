@@ -11,7 +11,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t java-demo .'
+                sh 'docker build -t java-demo:latest .'
             }
         }
 
