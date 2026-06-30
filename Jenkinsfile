@@ -17,8 +17,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'KUBECONFIG=/home/abjeet/.kube/config kubectl apply -f deployment.yaml'
-                sh 'KUBECONFIG=/home/abjeet/.kube/config kubectl apply -f service.yaml'
+                sh 'kubectl apply -f deployment.yaml'
+                sh 'kubectl apply -f service.yaml'
             }
         }
 
