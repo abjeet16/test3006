@@ -15,12 +15,8 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                sh 'KUBECONFIG=/home/abjeet/.kube/config kubectl apply -f deployment.yaml'
-                sh 'KUBECONFIG=/home/abjeet/.kube/config kubectl apply -f service.yaml'
-            }
-        }
-
     }
 }
+sudo chmod o+x /home/Abjeet/.kube/config
+sudo chmod -R o+rx /home/Abjeet/.minikube
+sudo find /home/Abjeet/.minikube -type f -exec chmod o+r {} \;
