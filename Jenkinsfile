@@ -17,6 +17,3 @@ pipeline {
 
     }
 }
-sudo chmod o+x /home/Abjeet/.kube/config
-sudo chmod -R o+rx /home/Abjeet/.minikube
-sudo find /home/Abjeet/.minikube -type f -exec chmod o+r {} \;
