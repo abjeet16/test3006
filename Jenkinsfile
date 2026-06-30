@@ -15,5 +15,12 @@ pipeline {
             }
         }
 
+        stage('Deploy') {
+            steps {
+                sh 'KUBECONFIG=/home/mca/.kube/config kubectl apply -f deployment.yaml'
+                sh 'KUBECONFIG=/home/mca/.kube/config kubectl apply -f service.yaml'
+            }
+        }
+
     }
 }
