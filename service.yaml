@@ -6,7 +6,7 @@ metadata:
 
 spec:
   selector:
-    app: java-demo-6cbc8d9d4d-4tj7b
+    app: java-demo
 
   ports:
     - port: 8081
